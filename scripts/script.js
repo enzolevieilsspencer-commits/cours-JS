@@ -1,25 +1,25 @@
-let prenom = "Enzo";
-alert("Bonjour " + prenom);
-console.log("Bonjour " + prenom);
+/* PHRASE DE PRESENTATION */
+
+let firstName = prompt("Quel est votre prenom ?");
 
 let name = prompt("Quel est votre nom ?");
-console.log(name);
 
-let annee = prompt("Quel est votre année de naissance ?");
-console.log(annee);
+let birthYear = prompt("Quel est votre annee de naissance ?");
 
 let ville = prompt("Quelle est votre ville de naissance?");
-console.log(ville);
 
-console.log(new Date().getFullYear());
-let age = new Date().getFullYear() - annee;
+let currentYear = new Date().getFullYear();
 
-console.log(typeof prenom);
+let age = currentYear - birthYear;
 
 console.log(
-  `Bonjour ${prenom} ${name} vous avez ${age} ans et vous êtes né à ${ville}`
+  `Bonjour ${firstName} ${name} vous avez ${age} ans et vous êtes né à ${ville}`
 );
 
-// ceci est un commentaire
-/* ceci est un commentaire
- multiligne */
+/* SWAP DE VARIABLES */
+
+let a = 1;
+let b = 2;
+let c = a;
+a = b;
+b = c;
