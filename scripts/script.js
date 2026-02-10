@@ -1,5 +1,5 @@
-/* PHRASE DE PRESENTATION */
-
+//PHRASE DE PRESENTATION //
+/*
 let firstName = prompt("Quel est votre prenom ?");
 
 let name = prompt("Quel est votre nom ?");
@@ -16,17 +16,16 @@ console.log(
   `Bonjour ${firstName} ${name} vous avez ${age} ans et vous êtes né à ${ville}`
 );
 
-/* SWAP DE VARIABLES */
-
+// SWAP DE VARIABLES
 let a = 1;
 let b = 2;
 let c = a;
 a = b;
 b = c;
 
-/* CONDITION */
+// CONDITION //
 
-/* EXERCICE 2.1 */
+// EXERCICE 2.1 //
 let number = prompt("Quel est votre nombre ?");
 
 if (number > 0) {
@@ -35,17 +34,20 @@ if (number > 0) {
   console.log("Votre nombre est negatif");
 }
 
-/* EXERCICE 2.2 */
+//EXERCICE 2.2 //
 let nb1 = prompt("Quel est votre premier nombre ?");
 let nb2 = prompt("Quel est votre deuxieme nombre ?");
 
-if (nb1 * nb2 > 0) {
+if ((nb1 > 0 && nb2 > 0) || (nb1 < 0 && nb2 < 0)) {
   console.log("Le produit de vos deux nombres est positif");
+} else if (nb1 == 0 || nb2 == 0) {
+  console.log("Le produit de vos deux nombres est nul");
 } else {
   console.log("Le produit de vos deux nombres est negatif");
+  let name1 = prompt("Quel est votre premier nom ?");
 }
 
-/* EXERCICE 2.3 */
+// EXERCICE 2.3 //
 let name1 = prompt("Quel est votre premier nom ?");
 let name2 = prompt("Quel est votre deuxieme nom ?");
 let name3 = prompt("Quel est votre troisieme nom ?");
@@ -56,7 +58,7 @@ if (name1 < name2 && name2 < name3) {
   console.log("Les noms ne sont pas rangés dans l'ordre alphabétique.");
 }
 
-/* EXERCICE 2.4 */
+// EXERCICE 2.4 //
 number = prompt("Quel est votre nombre ?");
 
 if (number === 0) {
@@ -67,7 +69,7 @@ if (number === 0) {
   console.log("Votre nombre est negatif");
 }
 
-/* EXERCICE 2.5 */
+// EXERCICE 2.5 //
 nb1 = prompt("Quel est votre premier nombre ?");
 nb2 = prompt("Quel est votre deuxieme nombre ?");
 
@@ -79,7 +81,7 @@ if (nb1 * nb2 === 0) {
   console.log("Le produit de vos deux nombres est negatif");
 }
 
-/* EXERCICE 2.6 */
+// EXERCICE 2.6 //
 age = prompt("Quelle est l'age de cette enfant ?");
 
 if (age >= 6 && age <= 7) {
@@ -88,11 +90,11 @@ if (age >= 6 && age <= 7) {
   console.log("cette enfant est dans la catégorie des pupilles");
 } else if (age >= 10 && age <= 11) {
   console.log("cette enfant est dans la catégorie des Minimes");
-} else if (age > 12) {
+} else if (age >= 12) {
   console.log("cette enfant est dans la catégorie des Cadet");
 }
 
-/* EXERCICE 2.7 */
+// EXERCICE 2.7 //
 number = Number(prompt("Entrez un nombre entre 0 et 9?"));
 
 if (number === 0) {
@@ -115,25 +117,20 @@ if (number === 0) {
   console.log("huit");
 } else if (number === 9) {
   console.log("neuf");
+} else {
+  console.log("Error");
 }
 
-/* EXERCICE 2.8 */
+// EXERCICE 2.8 //
 let anneA = prompt("chosir une année");
 
-if (anneA % 4 === 0) {
-  console.log("Cette année est bissextile");
-} else {
-  console.log("Cette année n'est pas bissextile");
-}
-if (anneA % 100 === 0) {
-  console.log("Cette année n'est pas bissextile");
-} else if (anneA % 400 === 0) {
+if (anneA % 4 === 0 && (anneA % 100 !== 0 || anneA % 400 === 0)) {
   console.log("Cette année est bissextile");
 } else {
   console.log("Cette année n'est pas bissextile");
 }
 
-/* EXERCICE 2.9 */
+// EXERCICE 2.9 //
 let valeur = Number(prompt("Entrez une valeur entre 1 et 9"));
 
 if (valeur < 1) {
@@ -166,7 +163,7 @@ if (valeur < 1) {
   console.log("C'est l'Apocalypse");
 }
 
-/* EXERCICE 2.10 */
+// EXERCICE 2.10 //
 let nombre1 = Number(prompt("Saisir un nombre entre 2 et 8"));
 if (nombre1 % 2 !== 0) {
   console.log("Erreur de saisie, le personnage ne bouge pas");
@@ -180,7 +177,7 @@ if (nombre1 % 2 !== 0) {
   console.log("Le personnage va en haut");
 }
 
-/* EXERCICE 2.11 */
+// EXERCICE 2.11 //
 let score1 = Number(prompt("Score du candidat 1 (nombre de voix) ?"));
 let score2 = Number(prompt("Score du candidat 2 (nombre de voix) ?"));
 let score3 = Number(prompt("Score du candidat 3 (nombre de voix) ?"));
@@ -216,3 +213,216 @@ if (nombre % 3 == 0) {
 } else {
   console.log("ERR");
 }
+// Exercie 3.1 //
+nombre = 7;
+while (nombre < 1 || nombre > 3) {
+  nombre = Number(prompt("Saisir un nombre entre 1 et 3 "));
+}
+console.log("Nombre valide");
+
+// Exercie 3.2 //
+nombre = 0;
+while (nombre < 10 || nombre > 20) {
+  nombre = Number(prompt("Saisir un nombre entre 10 et 20 "));
+  if (nombre < 10) {
+    console.log("Plus grand");
+  } else if (nombre > 20) {
+    console.log("Plus petit");
+  }
+}
+// Exercie 3.3 //
+nombre = Number(prompt("Saisir un nombre de départ "));
+let i = nombre + 1;
+while (i <= nombre + 10) {
+  console.log(i);
+  i++;
+}
+
+// Exercie 3.4 //
+nombre = Number(prompt("Saisir un nombre de départ "));
+for (let i = nombre + 1; i <= nombre + 10; i++) {
+  console.log(i);
+}
+
+// Exercie 3.5 //
+let nombreDepart = Number(prompt("Saisir un nombre de départ"));
+console.log(`Table de ${nombreDepart} :`);
+for (let i = 1; i <= 10; i++) {
+  console.log(`${nombreDepart} x ${i} = ${nombreDepart * i}`);
+}
+
+// Exercie 3.6 //
+nombre = Number(prompt("Saisir un nombre"));
+let somme = 0;
+for (let i = 1; i <= nombre; i++) {
+  somme = somme + i;
+}
+console.log(`La somme des ${nombre} premiers nombres est ${somme}`);
+
+// Exercie 3.7 //
+nombre = Number(prompt("Saisir un nombre"));
+let factorielle = 1;
+for (let i = 2; i <= nombre; i++) {
+  factorielle = factorielle * i;
+}
+console.log(`La factorielle de ${nombre} est ${factorielle}`);
+
+// Exercie 3.8 //
+let nombre = Number(prompt("Saisir un nombre"));
+let plusGrand = 0;
+let position = 0;
+let grandposition = 0;
+for (let i = 1; i <= 20; i++) {
+  nombre = Number(prompt("Saisir un nombre"));
+  if (nombre > plusGrand) {
+    plusGrand = nombre;
+    grandposition = i;
+  }
+}
+console.log(`Le plus grand nombre est ${plusGrand}`);
+console.log(`Le plus grand nombre a été saisi à la position ${grandposition}`);
+
+// Exercie 3.9 //
+let nombre = Number(prompt("Saisir un nombre"));
+let plusGrand = 0;
+let position = 0;
+let grandposition = 0;
+for (let i = 1; i <= 20; i++) {
+  nombre = Number(prompt("Saisir un nombre"));
+  if (nombre === 0) {
+    break;
+  } else if (nombre > plusGrand) {
+    plusGrand = nombre;
+    grandposition = i;
+  }
+}
+console.log(`Le plus grand nombre est ${plusGrand}`);
+console.log(`Le plus grand nombre a été saisi à la position ${grandposition}`);
+
+//Le diseur de bonne aventure
+function tellFortune(nombreEnfants, nomPartenaire, situationGeo, titrePoste) {
+  console.log(
+    `Vous serez un ${titrePoste} dans ${situationGeo} et marié à ${nomPartenaire} avec ${nombreEnfants} enfants`
+  );
+}
+tellFortune(2, "Sheryne", "Honfleur", "développeur");
+tellFortune(2, "Jane", "Lyon", "ingénieur");
+tellFortune(1, "Léa", "Marseille", "architecte");
+
+// l'âge de chien
+function calculateDogAge(age) {
+  let dogAge = Math.round(age * 7);
+  console.log(`Votre chiot a ${dogAge} ans en années de chien !`);
+  return;
+}
+calculateDogAge(5.3);
+calculateDogAge(2.5);
+calculateDogAge(3.7);
+
+//Le calculateur d'approvisionnement à vie
+function calculateSupply(age, amountPerDay) {
+  let maxAge = 100;
+  let days = (maxAge - age) * 365.25;
+  let supply = days * amountPerDay;
+  console.log(
+    `Vous aurez besoin de ${supply} approvisionnements pour vivre jusqu'à 100 ans !`
+  );
+}
+calculateSupply(20, 2);
+calculateSupply(30, 3);
+calculateSupply(40, 4);
+
+//Le géomètre
+function calcCircumfrence(rayon) {
+  let circumference = 2 * Math.PI * rayon;
+  console.log(`La circonférence est ${circumference}`);
+  return;
+}
+let area = Math.PI * rayon * rayon;
+console.log(`La surface est ${area}`);
+return;
+function calcArea(rayon) {
+}
+calcCircumfrence(10);
+calcArea(10);
+
+//Le convertisseur de température
+function celsiusToFahrenheit(celsius) {
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  console.log(`${celsius}°C is ${fahrenheit}°F`);
+  return;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  let celsius = (fahrenheit - 32) * (5 / 9);
+  console.log(`${fahrenheit}°F est ${celsius}°C`);
+  return;
+}
+
+celsiusToFahrenheit(20);
+fahrenheitToCelsius(18);
+
+*/
+class Lampe {
+  constructor(taille, couleur, puissanceAmpoule) {
+    this.taille = taille;
+    this.couleur = couleur;
+    this.puissanceAmpoule = puissanceAmpoule;
+    this.etat = true;
+  }
+  allumer() {
+    this.etat = true;
+  }
+  eteindre() {
+    this.etat = false;
+  }
+  afficherEtat() {
+    if (this.etat) {
+      console.log("La lampe est allumée");
+    } else {
+      console.log("La lampe est éteinte");
+    }
+  }
+  frotterLampe() {
+    console.log("le génie a été réveillé");
+  }
+  afficherTaille() {
+    console.log(`La taille de la lampe est ${this.taille}`);
+  }
+  afficherCouleur() {
+    console.log(`La couleur de la lampe est ${this.couleur}`);
+  }
+  afficherPuissanceAmpoule() {
+    console.log(`La puissance de l'ampoule est ${this.puissanceAmpoule}`);
+  }
+}
+const lampe = new Lampe(43, "Blanche", "75W");
+lampe.allumer();
+lampe.afficherEtat();
+lampe.frotterLampe();
+lampe.eteindre();
+lampe.afficherEtat();
+lampe.afficherTaille();
+lampe.afficherCouleur();
+lampe.afficherPuissanceAmpoule();
+
+class Voiture extends Vehicule {
+  constructor(marque, modele, annee, kilometrage) {
+    super(marque, modele, annee, kilometrage);
+    this.marque = marque;
+    this.modele = modele;
+    this.annee = annee;
+    this.kilometrage = kilometrage;
+  }
+  details() {
+    console.log(
+      `La voiture est une ${this.marque} ${this.modele} de ${this.annee} et a ${this.kilometrage} km`
+    );
+  }
+}
+
+const voiture = new Voiture("Renault", "Clio", 2020, 10000);
+voiture.details();
+voiture.avancer();
+voiture.tourner();
+voiture.reculer();
