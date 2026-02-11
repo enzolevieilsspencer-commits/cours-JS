@@ -362,7 +362,6 @@ function fahrenheitToCelsius(fahrenheit) {
 celsiusToFahrenheit(20);
 fahrenheitToCelsius(18);
 
-*/
 class Lampe {
   constructor(taille, couleur, puissanceAmpoule) {
     this.taille = taille;
@@ -381,20 +380,20 @@ class Lampe {
       console.log("La lampe est allumée");
     } else {
       console.log("La lampe est éteinte");
-    }
   }
-  frotterLampe() {
-    console.log("le génie a été réveillé");
-  }
-  afficherTaille() {
-    console.log(`La taille de la lampe est ${this.taille}`);
-  }
-  afficherCouleur() {
-    console.log(`La couleur de la lampe est ${this.couleur}`);
-  }
-  afficherPuissanceAmpoule() {
-    console.log(`La puissance de l'ampoule est ${this.puissanceAmpoule}`);
-  }
+}
+frotterLampe() {
+  console.log("le génie a été réveillé");
+}
+afficherTaille() {
+  console.log(`La taille de la lampe est ${this.taille}`);
+}
+afficherCouleur() {
+  console.log(`La couleur de la lampe est ${this.couleur}`);
+}
+afficherPuissanceAmpoule() {
+  console.log(`La puissance de l'ampoule est ${this.puissanceAmpoule}`);
+}
 }
 const lampe = new Lampe(43, "Blanche", "75W");
 lampe.allumer();
@@ -408,7 +407,7 @@ lampe.afficherPuissanceAmpoule();
 
 class Voiture extends Vehicule {
   constructor(marque, modele, annee, kilometrage) {
-    super(marque, modele, annee, kilometrage);
+    super();
     this.marque = marque;
     this.modele = modele;
     this.annee = annee;
@@ -419,10 +418,83 @@ class Voiture extends Vehicule {
       `La voiture est une ${this.marque} ${this.modele} de ${this.annee} et a ${this.kilometrage} km`
     );
   }
+  avancer() {
+    console.log("La voiture avance");
+  }
+  tourner() {
+    console.log("La voiture tourne");
+  }
+  reculer() {
+    console.log("La voiture recule");
+  }
 }
-
 const voiture = new Voiture("Renault", "Clio", 2020, 10000);
 voiture.details();
-voiture.avancer();
-voiture.tourner();
-voiture.reculer();
+vehicule.avancer();
+vehicule.tourner();
+vehicule.reculer();
+
+let langages = ["JavaScript", "Python", "C", "Rust"];
+langages.unshift("GO");
+langages.push("TypeScript");
+console.log(langages);
+
+let indexPython = langages.indexOf("Python");
+if (indexPython !== -1) {
+  langages.splice(indexPython, 1);
+}
+console.log(langages);
+
+
+function dateBetween(year, month, day) {
+  let now = new Date();
+  let date = new Date(year, month, day);
+  let diff = now - date;
+  let diffJours = Math.floor(diff / (1000 * 60 * 60 * 24));
+  alert(`La différence entre les deux dates est de ${diffJours} jours`);
+}
+dateBetween(2007, 3, 24);
+
+function nombreEntrer(N, N1) {
+  let nombre = Number(prompt("Saisir un nombre"));
+  let nombre1 = Number(prompt("Saisir un nombre"));
+  for (let i = nombre; i <= nombre1; i++) {
+    console.log(i);
+  }
+}
+nombreEntrer();
+
+function afficherNombre(N, N1) {
+  let nombre = Number(prompt("Saisir un nombre"));
+  let nombre1 = Number(prompt("Saisir un nombre"));
+  while (nombre <= nombre1) {
+    console.log(nombre);
+    nombre++;
+  }
+}
+afficherNombre();
+
+
+function additionnerNombre(N, N1) {
+  let nombre = Number(prompt("Saisir un nombre"));
+  let nombre1 = Number(prompt("Saisir un nombre"));
+  while (nombre && nombre1 < 0) {
+    console.log("tu ne peux pas saisir un nombre negatif");
+    if (nombre && nombre1 > 0) {
+    }
+    let somme = nombre + nombre1;
+    console.log(`La somme des nombres est ${somme}`);
+  }
+  additionnerNombre();
+}
+*/
+
+function calculerFactorelle(N) {
+  let nombre = Number(prompt("Saisir un nombre"));
+  let factorelle = 1;
+  for (let i = 1; i <= nombre; i++) {
+    factorelle = factorelle * i;
+  }
+  console.log(`La factorelle de ${nombre} est ${factorelle}`);
+}
+calculerFactorelle();
